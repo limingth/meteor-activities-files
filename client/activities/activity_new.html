@@ -1,6 +1,6 @@
-<template name="activitieNew">
+<template name="activityNew">
   <h2>Create activitie</h2>
-  {{#autoForm collection="Activities" id="activitieForm" type="insert"}}
+  {{#autoForm collection="Activities" id="activityForm" type="insert"}}
   <fieldset>
     {{> afQuickField name='title'}}
     {{> afQuickField name='desc' rows=6}}
@@ -11,5 +11,5 @@
     <!-- {{> afQuickField name='createdAt'}} -->
   </fieldset>
   <button type="submit" class="btn btn-primary">Create</button>
-  <a class="btn btn-link" role="button" href="{{pathFor 'activitieIndex'}}">Back</a> {{/autoForm}}
+  <a class="btn btn-link" role="button" href="{{pathFor 'activitiesIndex'}}">Back</a> {{/autoForm}}
 </template>

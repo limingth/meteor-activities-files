@@ -8,7 +8,7 @@ Template.activityNew.events ({
 });
 
 AutoForm.hooks({
-  'activitieForm': {
+  'activityForm': {
     before: {
       insert: function(doc) {
         doc.createdAt = new Date();

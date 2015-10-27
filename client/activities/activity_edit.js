@@ -1,8 +1,8 @@
-Template.activitieEdit.rendered = function() {
+Template.activityEdit.rendered = function() {
 };
 
-Template.activitieEdit.helpers({
+Template.activityEdit.helpers({
 });
 
-Template.activitieEdit.events ({
+Template.activityEdit.events ({
 });

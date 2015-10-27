@@ -24,16 +24,16 @@ Package.onUse(function(api) {
   // // template
   api.use(['minimongo', 'mongo-livedata', 'templating'], 'client');
 
-  // file
+  // file 
   // ls -l | awk '{print "api.addFiles(\""$9"\", \"client\");"}'
   api.addFiles('activities.js');
   api.addFiles('client/routes.js', 'client');
   api.addFiles("client/activities/activity_edit.html", "client");
   api.addFiles("client/activities/activity_edit.js", "client");
-  // api.addFiles("client/activities/activity_new.html", "client");
-  // api.addFiles("client/activities/activity_new.js", "client");
-  // api.addFiles("client/activities/activity_show.html", "client");
-  // api.addFiles("client/activities/activity_show.js", "client");
+  api.addFiles("client/activities/activity_new.html", "client");
+  api.addFiles("client/activities/activity_new.js", "client");
+  api.addFiles("client/activities/activity_show.html", "client");
+  api.addFiles("client/activities/activity_show.js", "client");
   api.addFiles("client/activities/activities.html", "client");
   api.addFiles("client/activities/activities_index.html", "client");
   api.addFiles("client/activities/activities_index.js", "client");

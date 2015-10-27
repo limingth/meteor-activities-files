@@ -35,7 +35,7 @@ Router.map(function() {
       return Meteor.subscribe('activity', this.params._id);
     },
     data: function () {
-      return activities.findOne(this.params._id);
+      return Activities.findOne(this.params._id);
     }
   });
 

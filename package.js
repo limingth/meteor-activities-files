@@ -1,6 +1,6 @@
 Package.describe({
-  name: 'douhengshan:activities',
-  version: '1.0.0',
+  name: 'maodouio:activities',
+  version: '0.0.1',
   // Brief, one-line summary of the package.
   summary: 'Maodou.io activities package, A meteor package that provides activities pages at /activities',
   // URL to the Git repository containing the source code for this package.
@@ -13,22 +13,13 @@ Package.describe({
 Package.onUse(function(api) {
   // version
   api.versionsFrom('1.2.0.2');
+
   // package
   api.use('iron:router@1.0.12', ["server", "client"]);
   api.use('aldeed:autoform@5.1.2', ["server", "client"]);
   api.use('aldeed:collection2@2.3.3', ["server", "client"]);
   api.use('aldeed:simple-schema@1.3.2', ["server", "client"]);
   api.use('matb33:collection-hooks@0.8.0', ["server", "client"]);
-
-  //css
-  // var clientFiles=[
-    // css
-    // "css/index.css",
-    // img
-    // "img/my_image.png"
-  // ];
-  // api.addFiles("clientFiles","client");
-  // api.addFiles("index.css","client");
 
   // template
   api.use('templating');
@@ -56,6 +47,6 @@ Package.onUse(function(api) {
 Package.onTest(function(api) {
   api.use('ecmascript');
   api.use('tinytest');
-  api.use('douhengshan:activities');
+  api.use('maodouio:activities');
   api.addFiles('activities-tests.js');
 });

@@ -21,32 +21,26 @@ Package.onUse(function(api) {
   api.use('aldeed:simple-schema@1.3.2', ["server", "client"]);
   api.use('matb33:collection-hooks@0.8.0', ["server", "client"]);
 
-  // template
-  api.use('templating');
+  // // template
+  api.use(['minimongo', 'mongo-livedata', 'templating'], 'client');
+
   // file
   // ls -l | awk '{print "api.addFiles(\""$9"\", \"client\");"}'
   api.addFiles('activities.js');
   api.addFiles('client/routes.js', 'client');
-  api.addFiles("client/activities/activitie_edit.html", "client");
-  api.addFiles("client/activities/activitie_edit.js", "client");
-  api.addFiles("client/activities/activitie_new.html", "client");
-  api.addFiles("client/activities/activitie_new.js", "client");
-  api.addFiles("client/activities/activitie_show.html", "client");
-  api.addFiles("client/activities/activitie_show.js", "client");
-  api.addFiles("client/activities/activitie.html", "client");
-  api.addFiles("client/activities/activitie_index.html", "client");
-  api.addFiles("client/activities/activitie_index.js", "client");
+  api.addFiles("client/activities/activity_edit.html", "client");
+  api.addFiles("client/activities/activity_edit.js", "client");
+  // api.addFiles("client/activities/activity_new.html", "client");
+  // api.addFiles("client/activities/activity_new.js", "client");
+  // api.addFiles("client/activities/activity_show.html", "client");
+  // api.addFiles("client/activities/activity_show.js", "client");
+  api.addFiles("client/activities/activities.html", "client");
+  api.addFiles("client/activities/activities_index.html", "client");
+  api.addFiles("client/activities/activities_index.js", "client");
 
   api.addFiles("lib/collections.js");
 
   api.addFiles("server/publications.js", "server");
 
   api.export('Activities');
-});
-
-Package.onTest(function(api) {
-  api.use('ecmascript');
-  api.use('tinytest');
-  api.use('maodouio:activities');
-  api.addFiles('activities-tests.js');
 });

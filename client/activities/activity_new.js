@@ -1,10 +1,10 @@
-Template.activitieNew.rendered = function() {
+Template.activityNew.rendered = function() {
 };
 
-Template.activitieNew.helpers({
+Template.activityNew.helpers({
 });
 
-Template.activitieNew.events ({
+Template.activityNew.events ({
 });
 
 AutoForm.hooks({
@@ -19,7 +19,7 @@ AutoForm.hooks({
     },
     onSuccess: function (operation, result, template) {
       console.log('New activitie inserted successfully!');
-      Router.go('activitieIndex', {_id: result});
+      Router.go('activitiesIndex', {_id: result});
     },
 
     onError: function(operation, error, template) {

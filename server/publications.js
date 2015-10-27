@@ -10,6 +10,6 @@ Meteor.publish('activities', function() {
 
 // DOCUMENT SHOW
 // -------------------------------------------------------
-Meteor.publish('activitie', function(id) {
+Meteor.publish('activity', function(id) {
   return Activities.find(id);
 });

@@ -6,8 +6,8 @@ Router.map(function() {
 
   // DOCUMENTS INDEX
   // -------------------------------------------------------
-  this.route('activitieIndex', {
-    template: 'activitieIndex',
+  this.route('activitiesIndex', {
+    template: 'activitiesIndex',
     path: '/activities',
     waitOn: function () {
       return Meteor.subscribe('activities');
@@ -21,18 +21,18 @@ Router.map(function() {
 
   // DOCUMENT NEW
   // -------------------------------------------------------
-  this.route('activitieNew', {
-    template: 'activitieNew',
+  this.route('activityNew', {
+    template: 'activityNew',
     path: '/activities/new'
   });
 
   // DOCUMENT SHOW
   // -------------------------------------------------------
-  this.route('activitieShow', {
-    template: 'activitieShow',
+  this.route('activityShow', {
+    template: 'activityShow',
     path: '/activities/:_id',
     waitOn: function () {
-      return Meteor.subscribe('activitie', this.params._id);
+      return Meteor.subscribe('activity', this.params._id);
     },
     data: function () {
       return activities.findOne(this.params._id);
@@ -41,11 +41,11 @@ Router.map(function() {
 
   // DOCUMENT EDIT
   // -------------------------------------------------------
-  this.route('activitieEdit', {
-    template: 'activitieEdit',
+  this.route('activityEdit', {
+    template: 'activityEdit',
     path: '/activities/:_id/edit',
     waitOn: function () {
-      return Meteor.subscribe('activitie', this.params._id);
+      return Meteor.subscribe('activity', this.params._id);
     },
     data: function () {
       return Activities.findOne(this.params._id);

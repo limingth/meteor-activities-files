@@ -37,6 +37,8 @@ Package.onUse(function(api) {
   api.addFiles("client/activities/activities.html", "client");
   api.addFiles("client/activities/activities_index.html", "client");
   api.addFiles("client/activities/activities_index.js", "client");
+  api.addFiles("client/activities/event_list.css", "client");
+  api.addFiles("client/activities/list_group.css", "client");
 
   api.addFiles("lib/collections.js");
 

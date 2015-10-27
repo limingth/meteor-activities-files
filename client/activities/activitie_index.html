@@ -1,0 +1,42 @@
+<template name="activitieIndex">
+  <!-- <link rel="stylesheet" href="/public/css/index.css"> -->
+  <div class="row">
+    <div class="col-md-12">
+      <h1>豆豆</h1>
+      <a class="btn btn-primary" href="{{pathFor 'activitieNew'}}" role="button">New activitie</a>
+      <table class="table table-striped">
+        <thead class="show box" >
+          <tr>
+            <th>Title</th>
+            <th>Desc</th>
+            <th>Time</th>
+            <th>Where</th>
+            <th>Limit</th>
+            <th>Fee</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each activities}}
+          <tr>
+            <td><a href="{{pathFor 'activitieShow'}}">{{name}}</a></td>
+            <td>{{desc}}</td>
+            <td>{{time}}</td>
+            <td>{{where}}</td>
+            <td>{{limit}}</td>
+            <td>{{fee}}</td>
+            <!-- <td>{{showPrettyTimestamp createdAt}}</td>
+            <td>{{showTimeAgo updatedAt}}</td> -->
+            <td>
+              <a class="btn btn-xs btn-default" href="{{pathFor 'activitieEdit'}}" role="button">Edit</a>
+              <a class="btn btn-xs btn-danger delete-activitie" href="#" role="button">Delete</a>
+              </td>
+          </tr>
+          {{else}}
+          No activities
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</template>

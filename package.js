@@ -24,7 +24,7 @@ Package.onUse(function(api) {
   // // template
   api.use(['minimongo', 'mongo-livedata', 'templating'], 'client');
 
-  // file 
+  // file
   // ls -l | awk '{print "api.addFiles(\""$9"\", \"client\");"}'
   api.addFiles('activities.js');
   api.addFiles('client/routes.js', 'client');

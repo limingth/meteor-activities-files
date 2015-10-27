@@ -1,5 +1,5 @@
 <template name="activityEdit">
-  <h2>Edit activitie</h2>
+  <h2>编辑</h2>
   {{#autoForm collection="Activities" doc=this id="activityForm" type="update"}}
     <fieldset>
       {{> afQuickField name='title'}}
@@ -10,7 +10,7 @@
       {{> afQuickField name='fee'}}
       {{> afQuickField name='createdAt'}}
     </fieldset>
-    <button type="submit" class="btn btn-primary">Update</button>
-    <a class="btn btn-link" role="button" href="{{pathFor 'activitiesIndex'}}">Back</a>
+    <button type="submit" class="btn btn-primary">更新</button>
+    <a class="btn btn-link" role="button" href="{{pathFor 'activitiesIndex'}}">返回</a>
   {{/autoForm}}
 </template>

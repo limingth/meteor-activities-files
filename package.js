@@ -1,6 +1,6 @@
 Package.describe({
   name: 'maodouio:activities',
-  version: '0.0.1',
+  version: '0.0.2',
   // Brief, one-line summary of the package.
   summary: 'Maodou.io activities package, A meteor package that provides activities pages at /activities',
   // URL to the Git repository containing the source code for this package.
@@ -37,7 +37,7 @@ Package.onUse(function(api) {
   api.addFiles("client/activities/activities.html", "client");
   api.addFiles("client/activities/activities_index.html", "client");
   api.addFiles("client/activities/activities_index.js", "client");
-  api.addFiles("client/activities/activity_details.css", "client");
+  // api.addFiles("client/activities/activity_details.css", "client");
   api.addFiles("client/activities/list_group.css", "client");
   api.addAssets("public/images/doudou.jpg", "client");
 

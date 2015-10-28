@@ -8,15 +8,14 @@ a.list-group-item.active small {
 .stars {
     margin:20px auto 1px;
 }
-.list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
+
+.list-group-item.active {
     z-index: 2;
-    color: #fff;
-    background-color: rgba(51, 122, 183, 0.51);
-    border-color: #337ab7;
+    background-color: rgb(51, 166, 183);
+    border-color: #B73333;
 }
-/*.list-group-item.active:focus {
-    z-index: 2;
-    color: #fff;
-    background-color: rgba(51, 122, 183, 0.51);
-    border-color: #337ab7;
-}*/
+.well {
+    min-height: 2px;
+    padding: 2px;
+    margin-bottom: 2px;
+}

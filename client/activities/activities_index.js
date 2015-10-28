@@ -33,12 +33,12 @@ Template.registerHelper('formatdatetime', function(datetime){
   }
 });
 
-Template.registerHelper('formatdatetimeDay', function(datetime){
+Template.registerHelper('formatdatetimeTime', function(datetime){
   if (moment && datetime) {
     if(datetime.getDate() === new Date().getDate()){
       return "今天 " + moment(datetime).format("hh:mm");
     } else{
-      return moment(datetime).format("DD hh:mm");
+      return moment(datetime).format("hh:mm");
     }
 
   }
@@ -47,12 +47,12 @@ Template.registerHelper('formatdatetimeDay', function(datetime){
   }
 });
 
-Template.registerHelper('formatdatetimeMonth', function(datetime){
+Template.registerHelper('formatdatetimeDate', function(datetime){
   if (moment && datetime) {
     if(datetime.getDate() === new Date().getDate()){
       return "今天 " + moment(datetime).format("hh:mm");
     } else{
-      return moment(datetime).format("MM hh:mm");
+      return moment(datetime).format("YY/MM/DD");
     }
 
   }

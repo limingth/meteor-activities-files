@@ -1,10 +1,26 @@
 <template name="activityShow">
-  <h2>{{title}}</h2>
-    <p>{{desc}}</p>
-    <p>{{time}}</p>
-    <p>{{where}}</p>
-    <p>{{limit}}</p>
-    <p>{{fee}}</p>
-  <p>{{createdAt}}</p>
-  <a href="{{pathFor 'activitiesIndex'}}">返回</a>
+  <div class="well">
+        <div class="media">
+        	<a class="pull-left" href="#">
+      		<img class="media-object" width="250" src="http://www.odeaanaude.eu/catalogaude2/images/montolieu76.jpg">
+    		</a>
+    		<div class="media-body">
+      		<h3 class="media-heading"><strong>活动主题: </strong><small>{{title}}</small></h3>
+          <h4><strong>活动详情:</strong></h4>
+          <p>{{desc}}</p>
+          <ul class="list-inline list-unstyled">
+  		       <li><span><i class="glyphicon glyphicon-clock"></i><small>时间: </small>{{formatdatetimeTime time}}</span></li><li>|</li>
+             <br>
+             <li><span><i class="glyphicon glyphicon-calendar"></i><small>日期: </small>{{formatdatetimeDate time}}</span></li><li>|</li>
+             <br>
+             <li><span><i class="glyphicon glyphicon-location"></i><small>地点: </small>{{where}}</span></li><li>|</li>
+             <br>
+             <li><span><i class="glyphicon glyphicon-location"></i><small>名额: </small>{{limit}}</span></li><li>|</li>
+             <br>
+             <li><span><i class="glyphicon glyphicon-location"></i><small>费用: </small>{{fee}}</span></li><li>|</li>
+  			    </ul>
+         </div>
+      </div>
+        <a href="{{pathFor 'activitiesIndex'}}">返回</a> -->
+    </div>
 </template>

@@ -24,7 +24,7 @@ Template.registerHelper('formatdatetime', function(datetime){
     if(datetime.getDate() === new Date().getDate()){
       return "今天 " + moment(datetime).format("hh:mm");
     } else{
-      return moment(datetime).format("YYYY/MM/DD hh:mm");
+      return moment(datetime).format("YYYY-MM-DD hh:mm");
     }
 
   }

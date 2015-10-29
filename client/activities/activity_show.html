@@ -5,22 +5,26 @@
       		<img class="media-object" width="250" src="http://www.odeaanaude.eu/catalogaude2/images/montolieu76.jpg">
     		</a>
     		<div class="media-body">
-      		<h3 class="media-heading"><strong>活动主题: </strong><small>{{title}}</small></h3>
+      		<br><h4 class="media-heading"><strong>活动主题: </strong></h4>
+          <p>{{title}}</p>
           <h4><strong>活动详情:</strong></h4>
           <p>{{desc}}</p>
           <ul class="list-inline list-unstyled">
-  		       <li><span><i class="glyphicon glyphicon-clock"></i><small>时间: </small>{{formatdatetimeTime time}}</span></li><li>|</li>
+  		       <li><span><i class="glyphicon"></i><b>时间:</b>   {{formatdatetimeTime time}}</span></li><li>|</li>
              <br>
-             <li><span><i class="glyphicon glyphicon-calendar"></i><small>日期: </small>{{formatdatetimeDate time}}</span></li><li>|</li>
+             <li><span><i class="glyphiconr"></i><b>日期:</b>  {{formatdatetimeDate time}}</span></li><li>|</li>
              <br>
-             <li><span><i class="glyphicon glyphicon-location"></i><small>地点: </small>{{where}}</span></li><li>|</li>
+             <li><span><i class="glyphicon"></i><b>地点:</b>   {{where}}</span></li>
              <br>
-             <li><span><i class="glyphicon glyphicon-location"></i><small>名额: </small>{{limit}}</span></li><li>|</li>
+              <li><span><i class="glyphicon"></i><b>名额:</b>   {{limit}} </span></li><li>|</li>
              <br>
-             <li><span><i class="glyphicon glyphicon-location"></i><small>费用: </small>{{fee}}</span></li><li>|</li>
+             <li><span><i class="glyphicon"></i><b>费用:</b>   {{fee}} </span></li><li>|</li>
   			    </ul>
          </div>
       </div>
-        <a href="{{pathFor 'activitiesIndex'}}">返回</a> -->
+        <a href="{{pathFor 'activitiesIndex'}}" role="button">返回</a> -->-->
+        <a class="btn btn-xs btn-default" href="{{pathFor 'activityEdit'}}" role="button">编辑</a>
+        <a class="btn btn-xs btn-danger delete-activitie" href="#" role="button">删除</a>
+        <p></p>
     </div>
 </template>

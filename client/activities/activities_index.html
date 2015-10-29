@@ -1,64 +1,20 @@
 <template name="activitiesIndex">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <h1>活动</h1><hr />
-        <a class="btn btn-primary" href="{{pathFor 'activityNew'}}" role="button">发布活动</a>
-        <table class="table table-striped">
-        <tbody>
-          <h1 class="text-center">活动列表</h1>
-            {{#each activities}}
-          <div class="row">
-        		<div class="well">
-            <!-- <div class="well col-md-12"> -->
-              <div class="list-group">
-                  <a href="{{pathFor 'activityShow'}}" class="list-group-item active">
-                        <div class="media col-md-3" style="padding-left: 2px;">
-                            <figure class="pull-left">
-                                <img class="media-object img-rounded img-responsive"  src="http://www.odeaanaude.eu/catalogaude2/images/montolieu76.jpg" style="margin-top: 6px;" >
-                            </figure>
-                        </div>
-                        <div class="col-md-6">
-                          <dl>
-                            <dt class="list-group-item-heading">活动主题: </dt>
-                              <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small>{{title}} </small></dd><br>
-                              <dt>活动详情: </dt>
-                                <dd class="list-group-item-text" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small>{{desc}}</small></dd>
-                          </dl>
-                        </div>
-                        <!-- <div class="col-md-3 text-center"> -->
-                          <div class="col-md-3 text-lift">
-                            <dl>
-                              <dt>活动时间:</dt>
-                              <dd>&nbsp;&nbsp;&nbsp;&nbsp;<small>{{formatdatetime time}}</small></dd><br>
-                              <dt>活动地点:</dt>
-                              <dd>&nbsp;&nbsp;&nbsp;&nbsp;<small>{{where}}</small></dd><br>
-                              <dt>名额及费用:</dt>
-                              <dd>&nbsp;&nbsp;&nbsp;&nbsp;<small>{{limit}}<small> / </small> {{fee}}</small></dd>
-                            </dl>
-                            <!-- <h5> <strong> 名额及费用: </strong> {{limit}}<small> / </small> {{fee}} </h5> -->
-                            <a class="btn btn-xs btn-default" href="{{pathFor 'activityEdit'}}" role="button">编辑</a>
-                            <a class="btn btn-xs btn-danger delete-activitie" href="#" role="button">删除</a>
-                            <p></p>
-                            <!-- <button type="button" class="btn btn-default btn-block"> Join Us Now! </button> -->
-                            <div class="stars">
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star-empty"></span>
-                            </div>
-                        </div>
-                  </a>
-                </div>
-              </div>
-        	</div>
-          {{else}}
-          No activities
-          {{/each}}
-        </tbody>
-        </table>
-      </div>
+      <!-- <h1>Schema One</h1> -->
+  <div class="panel panel-default">
+    <div class="panel-heading " style="padding-top: 5px; padding-bottom: 5px; padding-right: 0px; padding-left: 0px;">
+      <h3 class="title">活动列表<a href="{{pathFor 'activityNew'}}" class="btn btn-sm btn-primary pull-right">发起活动</a> </h3>
+      {{#each activities}}
+      <ul class="list-group" style="margin-bottom: 0px;">
+        <a href="{{pathFor 'activityShow'}}" class="list-group-item">
+          <img src="..//upfile/92aba3eae133835af43ee40a21881322.jpg" height="50px" width="50px" style="padding-top: 5px;padding-bottom: 5px;">
+          {{title}}&nbsp;&nbsp;&nbsp;&nbsp;<small><em>{{formatdatetime time}}</em></small>
+          <span class="badge">{{fee}}</span>
+        </a>
+      </ul>
+      {{else}}
+      No activities
+      {{/each}}
+      <span class="list-footer"><a href="#" class="btn btn-sm btn-primary" style="margin-top: 5px;">Show more</a></span>
     </div>
   </div>
 </template>

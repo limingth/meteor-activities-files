@@ -1,14 +1,12 @@
 <template name="activitiesIndex">
-      <!-- <h1>Schema One</h1> -->
-  <div class="panel panel-default">
     <div class="panel-heading " style="padding-top: 5px; padding-bottom: 5px; padding-right: 0px; padding-left: 0px;">
       <h3 class="title">活动列表<a href="{{pathFor 'activityNew'}}" class="btn btn-sm btn-primary pull-right">发起活动</a> </h3>
       {{#each activities}}
       <ul class="list-group" style="margin-bottom: 0px;">
         <a href="{{pathFor 'activityShow'}}" class="list-group-item">
-          <img src="..//upfile/92aba3eae133835af43ee40a21881322.jpg" height="50px" width="50px" style="padding-top: 5px;padding-bottom: 5px;">
+          <img src="..//upfile/92aba3eae133835af43ee40a21881322.jpg" height="70px" width="70px" style="padding-top: 5px;padding-bottom: 5px;">
           {{title}}&nbsp;&nbsp;&nbsp;&nbsp;<small><em>{{formatdatetime time}}</em></small>
-          <span class="badge">{{fee}}</span>
+          <span class="badge">{{limit}}/{{fee}}</span>
         </a>
       </ul>
       {{else}}
@@ -16,5 +14,4 @@
       {{/each}}
       <span class="list-footer"><a href="#" class="btn btn-sm btn-primary" style="margin-top: 5px;">Show more</a></span>
     </div>
-  </div>
 </template>

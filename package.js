@@ -37,7 +37,6 @@ Package.onUse(function(api) {
   api.addFiles("client/activities/activities.html", "client");
   api.addFiles("client/activities/activities_index.html", "client");
   api.addFiles("client/activities/activities_index.js", "client");
-  // api.addFiles("client/activities/activity_details.css", "client");
   api.addFiles("client/activities/list_group.css", "client");
   api.addAssets("public/images/doudou.jpg", "client");
 

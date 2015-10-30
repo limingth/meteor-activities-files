@@ -1,18 +1,23 @@
 <template name="activitiesIndex">
   <div class="list-group">
-  <div class="well well-sm" style="margin-bottom: 0px; height: 60px;">
-    <h3 class="title" style="margin-top: 10px;">活动列表
-      <a href="{{pathFor 'activityNew'}}" class="btn btn-sm btn-primary pull-right">发起活动</a>
-    </h3>
-  </div>
-  {{#each activities}}
-  <a href="{{pathFor 'activityShow'}}" class="list-group-item">
-    <li class="list-group-item-heading">{{title}}</li>
-    <p class="list-group-item-text"><small><em>{{formatdatetime time}}</em></small><span class="badge pull-right">{{fee}}</span></p>
-  </a>
-  {{else}}
-  No activities
-  {{/each}}
-  <div class="well well-sm"><a href="#" class="btn btn-sm btn-primary" style="margin-top: 5px;">Show more</a></div>
+    <div class="well well-sm" style="margin-bottom: 0px; height: 60px;">
+      <h3 class="title" style="margin-top: 10px;">活动列表
+        <a href="{{pathFor 'activityNew'}}" class="btn btn-sm btn-primary pull-right" style="text-shadow: black 5px 3px 3px; font-size: 13px;">
+          <span class="glyphicon glyphicon-plus"></span> 发起活动</a>
+      </h3>
+    </div>
+    {{#each activities}}
+    <a href="{{pathFor 'activityShow'}}" class="list-group-item">
+      <li class="list-group-item-heading" style="list-style-type:none;"><b>{{title}}</b></li>
+      <p class="list-group-item-text">
+        <!-- <small><em>{{formatdatetime time}}</em></small> -->
+        <small><em>{{desc}}</em></small>
+        <!-- <span class="badge pull-right">{{fee}}</span> -->
+      </p>
+    </a>
+    {{else}}
+    No activities
+    {{/each}}
+    <div class="well well-sm"><a href="#" class="btn btn-sm btn-primary" style="text-shadow: black 5px 3px 3px; margin-top: 5px; font-size: 13px;">Show more</a></div>
   </div>
 </template>

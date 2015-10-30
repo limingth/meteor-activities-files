@@ -4,9 +4,16 @@
 }
 
 .list-group-item.active {
-    z-index: 2;
-    color: #fff;
-    background-color: #ccc;
-    border-color: white;
-    height: 50px;
+  z-index: 2;
+  color: #fff;
+  background-color: #ccc;
+  border-color: white;
+  height: 50px;
+}
+
+.list-group-item-text {
+  white-space: nowrap;
+  width: 95%; 
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

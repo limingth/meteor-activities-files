@@ -43,6 +43,7 @@ Package.onUse(function(api) {
   api.addFiles("lib/collections.js");
 
   api.addFiles("server/publications.js", "server");
+  api.addFiles("server/fixtures.js", "server");
 
   api.export('Activities');
 });

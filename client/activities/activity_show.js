@@ -7,6 +7,18 @@ Template.activityShow.helpers({
 Template.activityShow.events ({
 });
 
+Template.activityShow.events ({
+  'click .delete-activitie': function(e) {
+    e.preventDefault();
+    var item = this;
+
+    if (confirm("Are you sure?")) {
+      Activities.remove(item._id);
+      console.log("Deleted!")
+    }
+  }
+});
+
 Template.registerHelper('formatdatetime', function(datetime){
   if (moment && datetime) {
     if(datetime.getDate() === new Date().getDate()){

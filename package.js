@@ -1,6 +1,6 @@
 Package.describe({
   name: 'maodouio:activities',
-  version: '0.0.3',
+  version: '0.0.4',
   // Brief, one-line summary of the package.
   summary: 'Maodou.io activities package, A meteor package that provides activities pages at /activities',
   // URL to the Git repository containing the source code for this package.

@@ -60,3 +60,17 @@ Template.registerHelper('formatdatetimeDate', function(datetime){
     return datetime;
   }
 });
+
+Template.registerHelper('formatdatetimeMonth', function(datetime){
+  if (moment && datetime) {
+    if(datetime.getDate() === new Date().getDate()){
+      return "今天 " + moment(datetime).format("hh:mm");
+    } else{
+      return moment(datetime).format("MM-DD");
+    }
+
+  }
+  else {
+    return datetime;
+  }
+});

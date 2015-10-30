@@ -11,9 +11,9 @@
   height: 50px;
 }
 
-.list-group-item-text {
+.list-group-item-text, .list-group-item-heading {
   white-space: nowrap;
-  width: 95%; 
+  width: 95%;
   overflow: hidden;
   text-overflow: ellipsis;
 }

@@ -20,6 +20,10 @@ Package.onUse(function(api) {
   api.use('aldeed:collection2@2.3.3', ["server", "client"]);
   api.use('aldeed:simple-schema@1.3.2', ["server", "client"]);
   api.use('matb33:collection-hooks@0.8.0', ["server", "client"]);
+  api.use('cfs:standard-packages@0.5.3', ["server", "client"]);
+  api.use('cfs:filesystem@0.1.1', ["server", "client"]);
+  api.use('yogiben:autoform-file@0.3.0', ["server", "client"]);
+  api.use('cfs:gridfs@0.0.33', ["server", "client"]);
 
   // // template
   api.use(['minimongo', 'mongo-livedata', 'templating'], 'client');
@@ -39,6 +43,9 @@ Package.onUse(function(api) {
   api.addFiles("client/activities/activities_index.js", "client");
   api.addFiles("client/activities/panel.css", "client");
   api.addAssets("public/images/doudou.jpg", "client");
+  api.addFiles("client/activities/myFilePreview.html", "client");
+  api.addFiles("client/activities/myRemoveFileBtn.html", "client");
+  api.addFiles("client/activities/mySelectFileBtn.html", "client");
 
   api.addFiles("lib/collections.js");
 

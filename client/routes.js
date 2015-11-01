@@ -53,3 +53,9 @@ Router.map(function() {
   });
 
 });
+
+this.route("profile", {
+  waitOn: function() {
+    return [Meteor.subscribe('images')];
+  }
+});

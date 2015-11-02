@@ -58,4 +58,3 @@ Router.map(function() {
   });
 
 });
-

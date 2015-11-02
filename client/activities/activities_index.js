@@ -2,9 +2,12 @@ Template.activitiesIndex.rendered = function() {
 };
 
 Template.activitiesIndex.helpers({
-  sayHello: function () {
-    return "Hello!";
-  }
+  file: function () {
+    console.log(this);
+    var id = this.picture;
+    console.log('id:', id);
+    return Images.findOne({_id: id});
+  },
 });
 
 Template.activitiesIndex.events ({

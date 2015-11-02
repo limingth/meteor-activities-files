@@ -10,6 +10,7 @@ Router.map(function() {
     template: 'activitiesIndex',
     path: '/activities',
     waitOn: function () {
+      Meteor.subscribe('images');
       return Meteor.subscribe('activities');
     },
     data: {
@@ -23,7 +24,10 @@ Router.map(function() {
   // -------------------------------------------------------
   this.route('activityNew', {
     template: 'activityNew',
-    path: '/activities/new'
+    path: '/activities/new',
+    waitOn: function () {
+      return Meteor.subscribe('images');
+    },
   });
 
   // DOCUMENT SHOW
@@ -32,6 +36,7 @@ Router.map(function() {
     template: 'activityShow',
     path: '/activities/:_id',
     waitOn: function () {
+      Meteor.subscribe('images');
       return Meteor.subscribe('activity', this.params._id);
     },
     data: function () {
@@ -54,8 +59,3 @@ Router.map(function() {
 
 });
 
-this.route("profile", {
-  waitOn: function() {
-    return [Meteor.subscribe('images')];
-  }
-});

@@ -11,6 +11,7 @@ AutoForm.hooks({
   'activityForm': {
     before: {
       insert: function(doc) {
+        console.log(doc);
         doc.createdAt = new Date();
         return doc;
         // doc.dateCreated = new Date();

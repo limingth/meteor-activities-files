@@ -1,115 +1,64 @@
 <template name="activityShow">
-  <!-- <div class="well" style="padding: 5px;">
-        <div class="media">
-            <img alt="image" class="postImage" src="{{file.url}}" />
-            <div class="actUserInfo" data-reactid=".2.1.0.0.4:0.0.1">
-                <img class="actUserPhoto" src="{{file.url}}" data-reactid=".2.1.0.0.4:0.0.1.0" />
-                <p class="actUserNameBox" data-reactid=".2.1.0.0.4:0.0.1.1">
-                    <span class="actUserName" data-reactid=".2.1.0.0.4:0.0.1.1.0">{{where}}</span>
-                    <span class="actUserLabel" data-reactid=".2.1.0.0.4:0.0.1.1.1">{{formatdatetime time}}日</span> -->
-                    <!-- <span class="pull-right" data-reactid=".2.1.0.0.4:0.0.1.1.2" style="font-size: 11px; color: #666; font-family: '华文细黑', 'Microsoft YaHei', Helvetica, Arial;">
-                        {{limit}}/{{fee}}</span> -->
-                <!-- </p>
-            </div><hr style="margin-top: 0px; margin-bottom: 0px;">
-            <div class="media-body">
-                <br><h4 class="media-heading" style="margin-top: 0px; margin-bottom: 5px;">
-                    <strong>活动主题: </strong></h4>
-                <p>{{title}}</p>
-                <h4 style="margin-bottom: 5px;"><strong>活动详情:</strong></h4>
-                <p style="font-size: 16px; color: #333; font-weight: normal; line-height: 175%; font-family: '华文细黑', 'Microsoft YaHei', Helvetica, Arial;">{{desc}}</p>
-                <ul class="list-inline list-unstyled" style="padding-top: 10px;">
-                    <li><span><i class="glyphicon"></i><b>时间:</b>   {{formatdatetimeTime time}}</span></li><li>|</li>
-                    <br>
-                    <li><span><i class="glyphiconr"></i><b>日期:</b>  {{formatdatetimeDate time}}</span></li><li>|</li>
-                    <br>
-                    <li style="padding-bottom: 10px;"><span><i class="glyphicon"></i><b>地点:</b>   {{where}}</span></li>
-                    <br>
-                    <li  style="padding-top: 10px;"><span><i class="glyphicon"></i><b>名额:</b>   {{limit}} </span></li><li>|</li>
-                    <br>
-                    <li><span><i class="glyphicon"></i><b>费用:</b>   {{fee}} </span></li><li>|</li>
-                </ul>
-            </div>
-        </div>
-        <a href="{{pathFor 'activitiesIndex'}}" role="button">返回</a>
-        <a class="btn btn-sm btn-default" href="{{pathFor 'activityEdit'}}" role="button">编辑</a>
-        <a class="btn btn-sm btn-danger delete-activitie" href="#" role="button">删除</a>
-        <p></p>
-    </div> -->
-
 <main data-reactid=".1.1">
     <div class="blank" data-reactid=".1.1.0">
         <div data-reactid=".1.1.0.0">
             <div class="postImgBox" data-reactid=".2.1.0.0.4:0.0.0">
-                <div class="postImg" data-reactid=".2.1.0.0.4:0.0.0.0">
-                    <img alt="image" class="postImage" src="{{file.url}}" data-reactid=".2.1.0.0.4:0.0.0.0.0">
+                <img alt="image" class="postImage" src="{{file.url}}" data-reactid=".2.1.0.0.4:0.0.0.0.0">
+            </div>
+            <div class="sPostUserBox" data-reactid=".h.1.0.0.1">
+                <img src="{{file.url}}" class="sPostUserphoto" data-reactid=".h.1.0.0.1.0">
+                <div class="sPostUserInfo" data-reactid=".h.1.0.0.1.1">
+                    <p class="actUserName nm" data-reactid=".h.1.0.0.1.1.0">{{where}}</p>
+                    <p class="actUserLabel nm" data-reactid=".h.1.0.0.1.1.1">{{formatdatetime time}}日</p>
                 </div>
             </div>
-            <div class="actUserInfo" data-reactid=".2.1.0.0.4:0.0.1">
-                <img class="actUserPhoto" src="{{file.url}}" data-reactid=".2.1.0.0.4:0.0.1.0" />
-                <p class="actUserNameBox" data-reactid=".2.1.0.0.4:0.0.1.1">
-                    <span class="actUserName" data-reactid=".2.1.0.0.4:0.0.1.1.0">{{where}}</span>
-                    <span class="actUserLabel" data-reactid=".2.1.0.0.4:0.0.1.1.1">{{formatdatetime time}}日</span>
-                </p>
-            </div>
-            <div class="sPostACon" data-reactid=".1.1.0.0.2">
-                <h1 class="sPostAConT" data-reactid=".1.1.0.0.2.0">
-                    <span data-reactid=".1.1.0.0.2.0.0">{{title}}</span>
-                    <span data-reactid=".1.1.0.0.2.0.1">和《大碗岛的星期天下午》</span>
-                </h1>
-                <h1 class="sPostAConT" data-reactid=".1.1.0.0.2.1"></h1>
-                <div class="sPostAConLabel" data-reactid=".1.1.0.0.2.2">
-                    <img src="#" class="sPostAConLabelImg" data-reactid=".1.1.0.0.2.2.0">
-                    <span data-reactid=".1.1.0.0.2.2.1">{{desc}}</span>
-                </div><div class="sPostAConText" data-reactid=".1.1.0.0.2.3">
-                    <div class="sPostAConTextCon" data-reactid=".1.1.0.0.2.3.0"> </div>
-                    <div class="sPostAConTextCon" data-reactid=".1.1.0.0.2.3.1">
-                        <div data-reactid=".1.1.0.0.2.3.1.0">
-                            <div>
-                                <p style="margin-bottom: 15px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; word-wrap: break-word !important;">
-                                    <span style="margin: 0px; padding: 0px; max-width: 100%; word-wrap: break-word !important;">在说到那幅将要作为主角的画之前，先说一段多年前的菜鸟经历。</span>
-                                </p>
-                                <p style="margin-bottom: 15px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; word-wrap: break-word !important;">
-                                    <span style="line-height: 1.42857143;">在一个叫做Asnieres的地方，我曾度过刚到巴黎的半年。那里是郊区，在大巴黎地区的西北角，有多远呢？把地铁13号线坐到尽头还要再换乘两站公交。被人从戴高乐机场直接拉到Asnieres的某间火柴盒公寓时，巴黎梦碎得稀里哗啦。</span>
-                                </p>
-                                <p style="margin-bottom: 15px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; word-wrap: break-word !important;">
-                                    <span style="margin: 0px; padding: 0px; max-width: 100%; word-wrap: break-word !important;">第二天去索邦大学语言学校注册。校区在著名的左岸，至少看起来，它有之前在书里看到过的关于巴黎的一切：生气勃勃的年轻男女夹着书本从你身边走过，路边绿鲜鲜的花店摆放了紫色的椅子，甜点店的烘焙味道和咖啡馆里的香气漫过整条街……现在这些可能都不算什么景致了，但那是14年前，对一个初次出国并且刚被远郊栖身地猛烈打击过的菜鸟，那就是具有拯救力量的魔幻时刻。虽说没有可能像马尔克斯那样，幸运到碰巧能在Saint-Michel大街向对面路过的海明威大师打声招呼，不过，后来到底也在Odeon地铁站边的咖啡座见过《精疲力尽》里那个晃晃悠悠倒在街头的贝尔蒙多，还在一家手工皮具店里偶遇过张曼玉，那时她刚被香港媒体披露和法国导演奥利维耶结婚了，整个人状态挺好，细长、苍白，一张脸特别干净。</span>
-                                    <img src="http://laniakea.oss-cn-beijing.aliyuncs.com/img/e16fb451764134063ceec166.jpg" class="" style="line-height: 1; width: 100%; float: none;">
-                                    <span style="line-height: 1.42857143;">总之可以想见，每次从索邦大学再回到住处，有多么嫌弃那个叫做Asnieres的地方。之后那半年，每天揣着一副好心情去上课，在光鲜的巴黎度过一天。然后在傍晚回家的13号地铁里，再一点点黯淡下来，回到让人失望的现实。以至于好几年以后，每次出差到巴黎，对这条倒霉的13号线仍然抱有一种习惯性排斥，尽可能避开坐它出行。</span>
-                                </p>
-                                <p style="margin-bottom: 15px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; word-wrap: break-word !important;">
-                                    <span style="margin: 0px; padding: 0px; max-width: 100%; word-wrap: break-word !important;">现在那幅画要出现了。离开巴黎好几年后，有一天，在一本关于法国后印象派的画册里，我看到了乔治·修拉（George Seurat）和他的名画：《大碗岛的星期天下午》（Sunday Afternoon on the Island of la Grande Jatte），更主要的是在对那幅画的介绍里，居然有一个我差不多快要忘记的地名：Asnieres，他们译作阿涅尔。也就是说，1894年，修拉是在我印象中无趣到只有火柴盒公寓和面目雷同街道的Asnieres画了一幅这么美的点画派风景代表作。</span>
-                                    <span style="line-height: 1; width: 100%;">
-                                        <img src="http://laniakea.oss-cn-beijing.aliyuncs.com/img/0f104f2f5be55ca9b0b2ca64.jpg" style="line-height: 1; text-align: center; width: 100%; float: none;">
-                                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                                    </span>
-                                    <span style="line-height: 1; text-align: center; font-size: 12px;">乔治·修拉</span>
-                                </p>
-                                <p style="margin-bottom: 15px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; word-wrap: break-word !important;">
-                                    <span style="line-height: 1.42857143;">即便是放在从马奈、莫奈、德加到梵高的整个印象派和后印象派的线索里面，《大碗岛的星期天下午》也是重要的，被认为是后印象派的起点之作，现在美国芝加哥艺术学院收藏。修拉用几百万个色彩点填满了7平方米的画布，有人统计上面有48个人物。他常上岛，总在同一个地点写生，所以和这幅名作相似角度的小画留了多幅。画册里说1884年的早些时候，修拉还画过一幅《阿涅尔浴场》，场景也在Asnieres,大约是大碗岛附近的某个地方，它现在的归属是英国国家美术馆。两幅画都是暖调子，却并不甜美，古怪地有一点阳光之下的幻灭感。只活了31岁的修拉，以及和他差不多同时期的保罗·西涅克（Paul Signac）、梵·高(Van Gogh)，也都爱好去Asnieres写生。在他们生活的时代，Asnieres的塞纳河段是巴黎平民周末郊游的地方，也吸引了这些没钱携家人去南部尼斯海边度假写生的穷画家。大碗岛（Island of la Grande Jatte）也是一个古怪的所在，后来看到有篇文章说，因为到大碗岛上去打发假日的人多，巴黎的妓女们也随之聚集到那里，所以修拉画里那些打着阳伞、穿着大蓬裙的窈窕女郎，有人是以她们为原型来写生的。大碗岛在19世纪末的名声并不好，劳工和中产阶级都会在那里休息和散步，性交易故尔也活跃，警察上岛扫黄的场景还有照片留存。画中那个牵着猴子的高大女性，有人指出可能是一位高级交际花的形象。只是在画笔之下，只留下了画家对光和影的单纯感受。不知道我从画上所感受到的阳光下的那种幻灭感，和这层现实生活的本来面目有没有一点点关系。</span>
-                                </p>
-                                <p style="margin-bottom: 15px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; word-wrap: break-word !important;">
-                                    <span style="margin: 0px; padding: 0px; max-width: 100%; word-wrap: break-word !important;">当年闷闷住在Asnieres的我何曾想过，离家几公里的地方，会有这样一段后印象派发生地？ </span>
-                                </p>
-                                <p style="margin-bottom: 15px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; word-wrap: break-word !important;">
-                                    <span style="margin: 0px; padding: 0px; max-width: 100%; word-wrap: break-word !important;">2014年春末去巴黎写篇杜拉斯百年诞辰的报道，在巴黎呆了十来天。中间一个周末，朋友提议去塞纳河边钓鱼烧烤。车开出巴黎市区半个小时后，开始觉得眼前的街道似曾相识，一问，原来目的地居然是Asnieres。就这么机缘巧合地，我回到了从未想过要再见的Asnieres,还见到了修拉在《大碗岛的星期天下午》上面画过的那座桥。</span>
-                                    <img src="http://laniakea.oss-cn-beijing.aliyuncs.com/img/bfb089b85b8d14bab934bf72.jpg" style="line-height: 1.42857143; width: 100%; float: none;">
-                                    <span style="line-height: 1.42857143;">朋友把车开下主路，停在离桥墩不远的一段河岸空地，说这是他常来钓鱼的“秘密花园”，不过之前，他完全不知道这里是那些画家写生的地方。我们在大树下支起烧烤架、钓鱼竿，开始喝酒。七八米外有个亚裔男孩，开辆旧雷诺两厢，男孩坐在打开的后备箱里，守着他的鱼竿，中间过来跟我们借了一次火，此外一直沉默不语。另一侧远远地停了辆小面包，有几个阿拉伯少年在烧烤，车里放出震耳电声。</span>
-                                </p>
-                                <p style="margin-bottom: 15px; padding: 0px; max-width: 100%; clear: both; min-height: 1em; word-wrap: break-word !important;">
-                                    <span style="margin: 0px; padding: 0px; max-width: 100%; word-wrap: break-word !important;">我不会钓鱼，就和同去的女友坐在那里看桥。桥应该是修复过的，但大体还是修拉的那幅画里的样子：河边草地没了，变成了我们脚下的水泥堤岸；河水是清淡透亮的蓝，还和画里一模一样。爬上坡道，沿桥走一圈，在离桥头不远的地方发现了一个铭牌，上面有张简易地图，用几个小红点分别标识了凡·高、西涅尔和修拉他们当年写生的确切位置。穿过对面街区，尽头有座看起来老旧的火车站，按惯例旁边必定有两个咖啡馆，看门脸和装饰也都有些年头了。露天座里拥挤在一起的男男女女，都有点雷诺阿画笔下磨坊舞会的味道。我们找个位置坐下来，捧杯咖啡，呆看了一阵车站里的人流。等回到河边，天色已经暗沉下去，喧闹的阿拉伯少年不见了，亚裔男孩依旧安静地守着他的鱼竿。桥身的彩灯被一层层打开了，影子随波光旋进塞纳河里，简直就是梵高画在此地的画面重现。那一刻我好像灵魂出窍，瞬时掉进了爱丽丝的“兔子洞”。</span>
-                                    <img src="http://laniakea.oss-cn-beijing.aliyuncs.com/img/3aea44acf456dc95a30d0e61.jpg" style="line-height: 1.42857143; width: 100%; float: none;">
-                                    <span style="line-height: 1.42857143;">不止一次有朋友向我抱怨，对巴黎好失望啊。深度中毒的巴黎爱好者初见巴黎却没有能够如愿倾倒：请问，美好时代那一席流动的盛宴到底摆在哪里？天际线下只有一成不变的铅灰色屋顶，总是飘着毛毛雨，看起来懒洋洋又乱糟糟，出门踩到狗屎的几率大概高于50%。但在灰蒙蒙的屋顶下，毕竟埋葬过那么多个世纪的艺术史、文学史以及来自世界各国的风流八卦史。回想起来，巴黎总有这点魔力可做期待：不知哪根线路错搭——误打误撞进了一个老咖啡馆，美术馆里偶然见到一幅画——平常见惯的景物就可能变得不同以往一些。既然连Asnieres这种鬼地方都曾经有过“大碗岛”，那些大街小巷里，说不定哪里就有个“兔子洞”随时等着你掉进去，开始一段奇妙旅行。</span>
+            <div class="sPostACon" data-reactid=".7.1.0.0.2">
+                    <h1 class="sActConT" data-reactid=".7.1.0.0.2.0">{{title}}</h1>
+                    <div class="sPostAConText" data-reactid=".7.1.0.0.2.1">
+                        <div class="sPostAConTextCon" data-reactid=".7.1.0.0.2.1.0">
+                            <span data-reactid=".7.1.0.0.2.1.0.0"> </span>
+                            <div data-reactid=".7.1.0.0.2.1.0.1"><div>
+                                <p>
+                                    <span style="line-height: 19.25px; widows: 1;">{{desc}}</span>
+                                    <br>
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <ul class="sActList" data-reactid=".7.1.0.0.3" style="padding-left: 0px;">
+                <li data-reactid=".7.1.0.0.3.0">
+                    <span class="sActListIcon glyphicon glyphicon-calendar"></span>
+                    <span data-reactid=".7.1.0.0.3.0.1">时间：</span>
+                    <span data-reactid=".7.1.0.0.3.0.2">{{formatdatetime time}}</span>
+                </li>
+                <li data-reactid=".7.1.0.0.3.1">
+                    <!-- <img src="/icons/seat@2x.png" class="sActListIcon" data-reactid=".7.1.0.0.3.1.0"> -->
+                    <span class="sActListIcon glyphicon glyphicon-globe"></span>
+                    <span data-reactid=".7.1.0.0.3.1.1">名额：</span>
+                    <span data-reactid=".7.1.0.0.3.1.2">{{limit}}</span>
+                </li>
+                <li data-reactid=".7.1.0.0.3.2">
+                    <!-- <img src="/icons/ticket@2x.png" class="sActListIcon" data-reactid=".7.1.0.0.3.2.0"> -->
+                    <span class="sActListIcon glyphicon glyphicon-usd"></span>
+                    <span data-reactid=".7.1.0.0.3.2.1">费用：</span>
+                    <span data-reactid=".7.1.0.0.3.2.2">{{fee}}</span>
+                </li>
+                <li data-reactid=".7.1.0.0.3.3">
+                    <!-- <img src="/icons/map@2x.png" class="sActListIcon" data-reactid=".7.1.0.0.3.3.0"> -->
+                    <span class="sActListIcon glyphicon glyphicon-map-marker"></span>
+                    <span data-reactid=".7.1.0.0.3.3.1">地点：</span>
+                    <span data-reactid=".7.1.0.0.3.3.2">{{where}}</span>
+                </li>
+                <li data-reactid=".7.1.0.0.3.4">
+                    <a class="btn btn-sm btn-default" href="{{pathFor 'activitiesIndex'}}" role="button">返回</a>
+                    <a class="btn btn-sm btn-default" href="{{pathFor 'activityEdit'}}" role="button">编辑</a>
+                    <a class="btn btn-sm btn-danger delete-activitie" href="#" role="button">删除</a>
+                </li>
+            </ul>
+            <br><button class="sActBtnOver" disabled="" data-reactid=".7.1.0.0.4">报名正在进行中</button>
         </div>
     </div>
-    <a href="{{pathFor 'activitiesIndex'}}" role="button">返回</a> -->-->
-    <a class="btn btn-sm btn-default" href="{{pathFor 'activityEdit'}}" role="button">编辑</a>
-    <a class="btn btn-sm btn-danger delete-activitie" href="#" role="button">删除</a>
 </main>
-
 </template>

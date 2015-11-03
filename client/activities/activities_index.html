@@ -1,5 +1,4 @@
 <template name="activitiesIndex">
-    <div class="container" style="-webkit-user-select:none;">
         <div class="well well-sm" style="margin-bottom: 0px; height: 60px;">
             <h3 class="title" style="margin-top: 10px;">活动列表
                 <a href="{{pathFor 'activityNew'}}" class="btn btn-sm btn-primary pull-right" style="font-size: 13px;">
@@ -36,6 +35,13 @@
                         <span class="actUserLabel" data-reactid=".2.1.0.0.4:0.0.1.1.1">{{formatdatetime time}}日</span>
                     </p>
                 </div>
+                <!-- <div class="sPostUserBox" data-reactid=".h.1.0.0.1">
+                    <img src="{{file.url}}" class="sPostUserphoto" data-reactid=".h.1.0.0.1.0">
+                    <div class="sPostUserInfo" data-reactid=".h.1.0.0.1.1">
+                        <p class="actUserName nm" data-reactid=".h.1.0.0.1.1.0">{{where}}</p>
+                        <p class="actUserLabel nm" data-reactid=".h.1.0.0.1.1.1">{{formatdatetime time}}日</p>
+                    </div>
+                </div> -->
                 <div class="clear" data-reactid=".2.1.0.0.4:0.0.2"></div>
             </div>
             <div class="darenActShadow" data-reactid=".2.1.0.0.4:0.1"></div>
@@ -45,5 +51,4 @@
         小气鬼,喝凉水,喝了凉水变魔鬼!
         {{/each}}
         <div class="well well-sm"><a href="{{pathFor 'camera'}}" class="btn btn-sm btn-primary" style="margin-top: 5px; font-size: 13px;">Show more</a></div>
-    </div>
 </template>

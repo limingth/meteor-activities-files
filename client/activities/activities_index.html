@@ -7,43 +7,36 @@
             </h3>
         </div> -->
         {{#each activities}}
-        <div data-reactid=".2.1.0.0.4:0">
+        <div>
             <a href="{{pathFor 'activityShow'}}">
-                <div class="darenPostList" id="3ggmM69ggaDo5wB8r" data-reactid=".2.1.0.0.4:0.0">
-                    <div class="postImgBox" data-reactid=".2.1.0.0.4:0.0.0">
-                        <div class="postImg" data-reactid=".2.1.0.0.4:0.0.0.0">
-                            <img alt="image" class="postImage" src="{{file.url}}" data-reactid=".2.1.0.0.4:0.0.0.0.0">
-                            <div class="postInfo" data-reactid=".2.1.0.0.4:0.0.0.0.1">
-                                <h1 class="postTitle" data-reactid=".2.1.0.0.4:0.0.0.0.1.0">
-                                    <div class="postTitleBor" data-reactid=".2.1.0.0.4:0.0.0.0.1.0.0">
-                                        <span data-reactid=".2.1.0.0.4:0.0.0.0.1.0.0.0">{{title}}</span>
-                                        <span data-reactid=".2.1.0.0.4:0.0.0.0.1.0.0.1"></span>
-                                        <br data-reactid=".2.1.0.0.4:0.0.0.0.1.0.0.2">
-                                        <span data-reactid=".2.1.0.0.4:0.0.0.0.1.0.0.3">{{desc}}</span>
-                                        <span data-reactid=".2.1.0.0.4:0.0.0.0.1.0.0.4"></span>
-                                        <span data-reactid=".2.1.0.0.4:0.0.0.0.1.0.0.5"></span>
+                <div class="darenPostList" id="3ggmM69ggaDo5wB8r">
+                    <div class="postImgBox">
+                        <div class="postImg">
+                            <img alt="image" class="postImage" src="{{file.url}}">
+                            <div class="postInfo">
+                                <h1 class="postTitle">
+                                    <div class="postTitleBor">
+                                        <span>{{title}}</span>
+                                        <span></span>
+                                        <br>
+                                        <span>{{desc}}</span>
+                                        <span></span>
+                                        <span></span>
                                     </div>
                                 </h1>
                             </div>
                         </div>
                     </div>
-                <div class="actUserInfo" data-reactid=".2.1.0.0.4:0.0.1">
-                    <img class="actUserPhoto" src="{{file.url}}" data-reactid=".2.1.0.0.4:0.0.1.0" />
-                    <p class="actUserNameBox" data-reactid=".2.1.0.0.4:0.0.1.1">
-                        <span class="actUserName" data-reactid=".2.1.0.0.4:0.0.1.1.0">{{where}}</span>
-                        <span class="actUserLabel" data-reactid=".2.1.0.0.4:0.0.1.1.1">{{formatdatetime time}}</span>
+                <div class="actUserInfo">
+                    <img class="actUserPhoto" src="{{file.url}}"/>
+                    <p class="actUserNameBox">
+                        <span class="actUserName">{{where}}</span>
+                        <span class="actUserLabel">{{formatdatetime time}}</span>
                     </p>
                 </div>
-                <!-- <div class="sPostUserBox" data-reactid=".h.1.0.0.1">
-                    <img src="{{file.url}}" class="sPostUserphoto" data-reactid=".h.1.0.0.1.0">
-                    <div class="sPostUserInfo" data-reactid=".h.1.0.0.1.1">
-                        <p class="actUserName nm" data-reactid=".h.1.0.0.1.1.0">{{where}}</p>
-                        <p class="actUserLabel nm" data-reactid=".h.1.0.0.1.1.1">{{formatdatetime time}}日</p>
-                    </div>
-                </div> -->
-                <div class="clear" data-reactid=".2.1.0.0.4:0.0.2"></div>
+                <div class="clear"></div>
             </div>
-            <div class="darenActShadow" data-reactid=".2.1.0.0.4:0.1"></div>
+            <div class="darenActShadow"></div>
         </a>
         </div>
         {{else}}

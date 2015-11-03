@@ -1,23 +1,23 @@
 <template name="activityShow">
 <main data-reactid=".1.1">
-    <div class="blank" data-reactid=".1.1.0">
-        <div data-reactid=".1.1.0.0">
-            <div class="postImgBox" data-reactid=".2.1.0.0.4:0.0.0">
-                <img alt="image" class="postImage" src="{{file.url}}" data-reactid=".2.1.0.0.4:0.0.0.0.0">
+    <div class="blank">
+        <div>
+            <div class="postImgBox">
+                <img alt="image" class="postImage" src="{{file.url}}">
             </div>
-            <div class="sPostUserBox" data-reactid=".h.1.0.0.1">
-                <img src="{{file.url}}" class="sPostUserphoto" data-reactid=".h.1.0.0.1.0">
-                <div class="sPostUserInfo" data-reactid=".h.1.0.0.1.1">
-                    <p class="actUserName nm" data-reactid=".h.1.0.0.1.1.0">{{where}}</p>
-                    <p class="actUserLabel nm" data-reactid=".h.1.0.0.1.1.1">{{formatdatetime time}}日</p>
+            <div class="sPostUserBox">
+                <img src="{{file.url}}" class="sPostUserphoto">
+                <div class="sPostUserInfo">
+                    <p class="actUserName nm">{{where}}</p>
+                    <p class="actUserLabel nm">{{formatdatetime time}}日</p>
                 </div>
             </div>
-            <div class="sPostACon" data-reactid=".7.1.0.0.2">
-                    <h1 class="sActConT" data-reactid=".7.1.0.0.2.0">{{title}}</h1>
-                    <div class="sPostAConText" data-reactid=".7.1.0.0.2.1">
-                        <div class="sPostAConTextCon" data-reactid=".7.1.0.0.2.1.0">
-                            <span data-reactid=".7.1.0.0.2.1.0.0"> </span>
-                            <div data-reactid=".7.1.0.0.2.1.0.1"><div>
+            <div class="sPostACon">
+                    <h1 class="sActConT">{{title}}</h1>
+                    <div class="sPostAConText">
+                        <div class="sPostAConTextCon">
+                            <span> </span>
+                            <div><div>
                                 <p>
                                     <span style="line-height: 19.25px; widows: 1;">{{desc}}</span>
                                     <br>
@@ -27,37 +27,37 @@
                     </div>
                 </div>
             </div>
-            <ul class="sActList" data-reactid=".7.1.0.0.3" style="padding-left: 0px;">
-                <li data-reactid=".7.1.0.0.3.0">
+            <ul class="sActList" style="padding-left: 0px;">
+                <li>
                     <span class="sActListIcon glyphicon glyphicon-calendar"></span>
-                    <span data-reactid=".7.1.0.0.3.0.1">时间：</span>
-                    <span data-reactid=".7.1.0.0.3.0.2">{{formatdatetime time}}</span>
+                    <span>时间：</span>
+                    <span>{{formatdatetime time}}</span>
                 </li>
-                <li data-reactid=".7.1.0.0.3.1">
-                    <!-- <img src="/icons/seat@2x.png" class="sActListIcon" data-reactid=".7.1.0.0.3.1.0"> -->
+                <li>
+                    <!-- <img src="/icons/seat@2x.png" class="sActListIcon"> -->
                     <span class="sActListIcon glyphicon glyphicon-globe"></span>
-                    <span data-reactid=".7.1.0.0.3.1.1">名额：</span>
-                    <span data-reactid=".7.1.0.0.3.1.2">{{limit}}</span>
+                    <span>名额：</span>
+                    <span>{{limit}}</span>
                 </li>
-                <li data-reactid=".7.1.0.0.3.2">
-                    <!-- <img src="/icons/ticket@2x.png" class="sActListIcon" data-reactid=".7.1.0.0.3.2.0"> -->
+                <li>
+                    <!-- <img src="/icons/ticket@2x.png" class="sActListIcon"> -->
                     <span class="sActListIcon glyphicon glyphicon-usd"></span>
-                    <span data-reactid=".7.1.0.0.3.2.1">费用：</span>
-                    <span data-reactid=".7.1.0.0.3.2.2">{{fee}}</span>
+                    <span>费用：</span>
+                    <span>{{fee}}</span>
                 </li>
-                <li data-reactid=".7.1.0.0.3.3">
-                    <!-- <img src="/icons/map@2x.png" class="sActListIcon" data-reactid=".7.1.0.0.3.3.0"> -->
+                <li>
+                    <!-- <img src="/icons/map@2x.png" class="sActListIcon"> -->
                     <span class="sActListIcon glyphicon glyphicon-map-marker"></span>
-                    <span data-reactid=".7.1.0.0.3.3.1">地点：</span>
-                    <span data-reactid=".7.1.0.0.3.3.2">{{where}}</span>
+                    <span>地点：</span>
+                    <span>{{where}}</span>
                 </li>
-                <li data-reactid=".7.1.0.0.3.4">
+                <li>
                     <a class="btn btn-sm btn-default" href="{{pathFor 'activitiesIndex'}}" role="button">返回</a>
                     <a class="btn btn-sm btn-default" href="{{pathFor 'activityEdit'}}" role="button">编辑</a>
                     <a class="btn btn-sm btn-danger delete-activitie" href="#" role="button">删除</a>
                 </li>
             </ul>
-            <!-- <br><button class="sActBtnOver" disabled="" data-reactid=".7.1.0.0.4">报名正在进行中</button> -->
+            <!-- <br><button class="sActBtnOver" disabled="">报名正在进行中</button> -->
         </div>
     </div>
 </main>

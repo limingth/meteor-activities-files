@@ -15,5 +15,6 @@
     <a class="btn btn-link" role="button" href="{{pathFor 'activitiesIndex'}}">返回</a> {{/autoForm}}
 </template>
 <template name="myFilePreview">
-  <a href="{{file.url}}">{{file.original.name}}</a>
+  <!-- <a href="{{file.url}}">{{file.original.name}}</a> -->
+  <img src="{{file.url}}" alt="{{file.original.name}}" width="150px;"/>
 </template>

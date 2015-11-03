@@ -1,6 +1,6 @@
 Package.describe({
   name: 'maodouio:activities-file',
-  version: '0.0.7',
+  version: '0.0.8',
   // Brief, one-line summary of the package.
   summary: 'Maodou.io activities package, A meteor package that provides activities pages at /activities',
   // URL to the Git repository containing the source code for this package.
@@ -23,7 +23,7 @@ Package.onUse(function(api) {
   api.use('cfs:standard-packages@0.5.9', ["server", "client"]);
   api.use('cfs:gridfs@0.0.33', ["server", "client"]);
   api.use('cfs:filesystem@0.1.2', ["server", "client"]);
-  api.use('shinn:autoform-file@0.3.2', ["server", "client"]);
+  api.use('maodouio:autoform-file@1.0.5', ["server", "client"]);
 
   // // template
   api.use(['minimongo', 'mongo-livedata', 'templating'], 'client');

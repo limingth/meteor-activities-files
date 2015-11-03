@@ -1,4 +1,5 @@
 <template name="activityNew">
+  <div class="container">
     <h4><b>发布新的活动</b></h4>
     {{#autoForm collection="Activities" id="activityForm" type="insert"}}
     <fieldset>
@@ -13,6 +14,7 @@
     </fieldset>
     <button type="submit" class="btn btn-primary">提交</button>
     <a class="btn btn-link" role="button" href="{{pathFor 'activitiesIndex'}}">返回</a> {{/autoForm}}
+  </div>
 </template>
 <template name="myFilePreview">
   <!-- <a href="{{file.url}}">{{file.original.name}}</a> -->

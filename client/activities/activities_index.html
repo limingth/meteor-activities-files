@@ -1,12 +1,11 @@
 <template name="activitiesIndex">
-        <div class="well well-sm" style="margin-bottom: 0px; height: 60px;">
+<!--         <div class="well well-sm" style="margin-bottom: 0px; height: 60px;">
             <h3 class="title" style="margin-top: 10px;">活动列表
                 <a href="{{pathFor 'activityNew'}}" class="btn btn-sm btn-primary pull-right" style="font-size: 13px;">
-                <!-- style="text-shadow: black 5px 3px 3px;"是设置阴影效果的风格"  -->
                     <span class="glyphicon glyphicon-plus"></span> 发起活动
                 </a>
             </h3>
-        </div>
+        </div> -->
         {{#each activities}}
         <div data-reactid=".2.1.0.0.4:0">
             <a href="{{pathFor 'activityShow'}}">
@@ -32,7 +31,7 @@
                     <img class="actUserPhoto" src="{{file.url}}" data-reactid=".2.1.0.0.4:0.0.1.0" />
                     <p class="actUserNameBox" data-reactid=".2.1.0.0.4:0.0.1.1">
                         <span class="actUserName" data-reactid=".2.1.0.0.4:0.0.1.1.0">{{where}}</span>
-                        <span class="actUserLabel" data-reactid=".2.1.0.0.4:0.0.1.1.1">{{formatdatetime time}}日</span>
+                        <span class="actUserLabel" data-reactid=".2.1.0.0.4:0.0.1.1.1">{{formatdatetime time}}</span>
                     </p>
                 </div>
                 <!-- <div class="sPostUserBox" data-reactid=".h.1.0.0.1">
@@ -48,7 +47,12 @@
         </a>
         </div>
         {{else}}
-        小气鬼,喝凉水,喝了凉水变魔鬼!
+        <!-- 小气鬼,喝凉水,喝了凉水变魔鬼! -->
+          <div class="well well-sm" style="margin-bottom: 0px; height: 60px;">
+            <a href="{{pathFor 'activityNew'}}" class="btn btn-sm btn-primary pull-left" style="font-size: 13px;">
+                <span class="glyphicon glyphicon-plus"></span> 发起活动
+            </a>
+          </div>
         {{/each}}
-        <div class="well well-sm"><a href="#" class="btn btn-sm btn-primary" style="margin-top: 5px; font-size: 13px;">Show more</a></div>
+        <!-- <div class="well well-sm"><a href="#" class="btn btn-sm btn-primary" style="margin-top: 5px; font-size: 13px;">Show more</a></div> -->
 </template>

@@ -21,6 +21,7 @@ Template.activityShow.events ({
     if (confirm("Are you sure?")) {
       Activities.remove(item._id);
       console.log("Deleted!")
+      Router.go('/activities')
     }
   }
 });

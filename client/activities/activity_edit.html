@@ -1,5 +1,6 @@
 <template name="activityEdit">
-    <h2>编辑</h2>
+  <div class="container">
+    <h4>编辑活动</h4>
     {{#autoForm collection="Activities" doc=this id="activityForm" type="update"}}
     <fieldset>
         {{> afQuickField name='title'}}
@@ -14,6 +15,7 @@
     <button type="submit" class="btn btn-primary">更新</button>
     <a class="btn btn-link" role="button" href="{{pathFor 'activitiesIndex'}}">返回</a>
     {{/autoForm}}
+  </div>
 </template>
 <!-- <template name="myFilePreview">
   <a href="{{file.url}}">{{file.original.name}}</a>

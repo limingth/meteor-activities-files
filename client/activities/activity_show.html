@@ -1,28 +1,40 @@
 <template name="activityShow">
-  <div class="well">
+  <div class="well" style="padding: 5px;">
         <div class="media">
-            <img src="{{file.url}}" />
+            <img alt="image" class="postImage" src="{{file.url}}" />
+            <div class="actUserInfo" data-reactid=".2.1.0.0.4:0.0.1">
+                <img class="actUserPhoto" src="{{file.url}}" data-reactid=".2.1.0.0.4:0.0.1.0" />
+                <p class="actUserNameBox" data-reactid=".2.1.0.0.4:0.0.1.1">
+                    <span class="actUserName" data-reactid=".2.1.0.0.4:0.0.1.1.0">{{where}}</span>
+                    <span class="actUserLabel" data-reactid=".2.1.0.0.4:0.0.1.1.1">{{formatdatetime time}}日</span>
+                    <!-- <span class="pull-right" data-reactid=".2.1.0.0.4:0.0.1.1.2" style="font-size: 11px; color: #666; font-family: '华文细黑', 'Microsoft YaHei', Helvetica, Arial;">
+                        {{limit}}/{{fee}}</span> -->
+                </p>
+            </div><hr style="margin-top: 0px; margin-bottom: 0px;">
             <div class="media-body">
-                <br><h4 class="media-heading"><strong>活动主题: </strong></h4>
+                <br><h4 class="media-heading" style="margin-top: 0px; margin-bottom: 5px;">
+                    <strong>活动主题: </strong></h4>
                 <p>{{title}}</p>
-                <h4><strong>活动详情:</strong></h4>
-                <p>{{desc}}</p>
-                <ul class="list-inline list-unstyled">
+                <h4 style="margin-bottom: 5px;"><strong>活动详情:</strong></h4>
+                <p style="font-size: 16px; color: #333; font-weight: normal; line-height: 175%; font-family: '华文细黑', 'Microsoft YaHei', Helvetica, Arial;">{{desc}}</p>
+                <img alt="image" class="postImage" src="{{file.url}}" />
+                <ul class="list-inline list-unstyled" style="padding-top: 10px;">
                     <li><span><i class="glyphicon"></i><b>时间:</b>   {{formatdatetimeTime time}}</span></li><li>|</li>
                     <br>
                     <li><span><i class="glyphiconr"></i><b>日期:</b>  {{formatdatetimeDate time}}</span></li><li>|</li>
                     <br>
-                    <li><span><i class="glyphicon"></i><b>地点:</b>   {{where}}</span></li>
+                    <li style="padding-bottom: 10px;"><span><i class="glyphicon"></i><b>地点:</b>   {{where}}</span></li>
                     <br>
-                    <li><span><i class="glyphicon"></i><b>名额:</b>   {{limit}} </span></li><li>|</li>
+                    <img alt="image" class="postImage" src="{{file.url}}" />
+                    <li  style="padding-top: 10px;"><span><i class="glyphicon"></i><b>名额:</b>   {{limit}} </span></li><li>|</li>
                     <br>
                     <li><span><i class="glyphicon"></i><b>费用:</b>   {{fee}} </span></li><li>|</li>
                 </ul>
             </div>
         </div>
         <a href="{{pathFor 'activitiesIndex'}}" role="button">返回</a> -->-->
-        <a class="btn btn-xs btn-default" href="{{pathFor 'activityEdit'}}" role="button">编辑</a>
-        <a class="btn btn-xs btn-danger delete-activitie" href="#" role="button">删除</a>
+        <a class="btn btn-sm btn-default" href="{{pathFor 'activityEdit'}}" role="button">编辑</a>
+        <a class="btn btn-sm btn-danger delete-activitie" href="#" role="button">删除</a>
         <p></p>
     </div>
 </template>

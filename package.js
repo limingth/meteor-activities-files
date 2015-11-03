@@ -23,7 +23,7 @@ Package.onUse(function(api) {
   api.use('cfs:standard-packages@0.5.9', ["server", "client"]);
   api.use('cfs:gridfs@0.0.33', ["server", "client"]);
   api.use('cfs:filesystem@0.1.2', ["server", "client"]);
-  api.use('yogiben:autoform-file@0.3.0', ["server", "client"]);
+  api.use('maodouio:autoform-file@1.0.4', ["server", "client"]);
 
   // // template
   api.use(['minimongo', 'mongo-livedata', 'templating'], 'client');
@@ -44,10 +44,7 @@ Package.onUse(function(api) {
   api.addFiles("client/activities/panel.css", "client");
 
   api.addFiles("lib/collections.js");
-
-  //添加测试数据
   // api.addFiles("server/fixtures.js", "server");
-
   api.addFiles("server/publications.js", "server");
   api.addFiles("server/permissions.js", "server");
 

@@ -1,6 +1,6 @@
 Package.describe({
   name: 'maodouio:activities-file',
-  version: '0.0.1',
+  version: '0.0.5',
   // Brief, one-line summary of the package.
   summary: 'Maodou.io activities package, A meteor package that provides activities pages at /activities',
   // URL to the Git repository containing the source code for this package.
@@ -22,7 +22,7 @@ Package.onUse(function(api) {
   api.use('matb33:collection-hooks@0.8.0', ["server", "client"]);
   api.use('cfs:standard-packages@0.5.9', ["server", "client"]);
   api.use('cfs:gridfs@0.0.33', ["server", "client"]);
-  // api.use('cfs:filesystem@0.1.2', ["server", "client"]);
+  api.use('cfs:filesystem@0.1.2', ["server", "client"]);
   api.use('yogiben:autoform-file@0.3.0', ["server", "client"]);
 
   // // template
@@ -45,7 +45,9 @@ Package.onUse(function(api) {
 
   api.addFiles("lib/collections.js");
 
-  api.addFiles("server/fixtures.js", "server");
+  //添加测试数据
+  // api.addFiles("server/fixtures.js", "server");
+
   api.addFiles("server/publications.js", "server");
   api.addFiles("server/permissions.js", "server");
 
